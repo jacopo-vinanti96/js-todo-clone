@@ -1,7 +1,7 @@
 // Dichiarazione variabili
 var addProject = $('#add-project'),
     addValue,
-    detailsTemplate = $('.details-template'),
+    detailsTemplate = $('.template .details-template'),
     projectDate,
     lineTemplate = $('.list-template .list-element'),
     tempTemplate,
@@ -46,4 +46,8 @@ addProject.on('keydown', function (e) {
       $('.list__container').append(tempTemplate);
     }
   }
+});
+
+$('.list__container').on( 'click', '.list-element', function () {
+  $(this).remove();
 });
