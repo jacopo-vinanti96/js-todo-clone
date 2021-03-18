@@ -1,13 +1,21 @@
+/* Reset */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Mix */
+.template {
+  display: none;
+}
+
+/* BODY */
 body {
   background-color: lightgrey;
 }
 
+/* Header */
 header {
   padding: 20px;
   width: 100%;
@@ -16,6 +24,7 @@ header {
   color: #0E4749;
 }
 
+/* Main */
 .main__container {
   width: 1024px;
   margin: auto;
@@ -32,6 +41,35 @@ h2 {
   display: inline-block;
 }
 
-.template {
+/* Liste */
+ul {
+  list-style: none;
+}
+
+li {
+  width: max-content;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+li.clicked {
+  opacity: 0;
+}
+
+/* list items span*/
+li span {
+  color: red;
+}
+
+li.clicked span {
   display: none;
+}
+
+span.check {
+  display: none;
+  color: green;
+}
+
+li.clicked span.check {
+  display: inline;
 }

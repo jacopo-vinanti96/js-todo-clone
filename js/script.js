@@ -78,5 +78,9 @@ addProject.on('keydown', function (e) {
 });
 
 $('.list__container').on( 'click', '.list-element', function () {
-  $(this).remove();
+  $(this).addClass('clicked');
+  setTimeout( function () {
+    console.log($(".list-element.clicked"));
+    $(".list-element.clicked").remove();
+  }, 1000);
 });
