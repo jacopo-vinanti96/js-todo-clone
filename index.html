@@ -14,23 +14,29 @@
   </header>
   <main>
     <div class="main__container">
-      <details open>
-        <summary><h2>Today</h2></summary>
-        <ul id="today">
-        </ul>
-      </details>
-      <details open>
-        <summary><h2>Tomorrow</h2></summary>
-        <ul id="tomorrow">
-        </ul>
-      </details>
-      <details class="details-template" open>
-        <summary class="summary-template"></summary>
-        <ul class="list-template">
-          <li class="list-element"><span>&cross;</span></li>
-        </ul>
-      </details>
-      <input id="add-project" type="text" placeholder="Add a project">
+      <div class="list__container">
+        <details open>
+          <summary><h2>Today</h2></summary>
+          <ul id="today">
+          </ul>
+        </details>
+        <details open>
+          <summary><h2>Tomorrow</h2></summary>
+          <ul id="tomorrow">
+          </ul>
+        </details>
+        <div class="template">
+          <details class="details-template" open>
+            <summary class="summary-template"></summary>
+            <ul class="list-template">
+              <li class="list-element"><span>&cross;</span></li>
+            </ul>
+          </details>
+        </div>
+      </div>
+      <div class="input__container">
+        <input id="add-project" type="text" placeholder="Add a project">
+      </div>
     </div>
   </main>
 

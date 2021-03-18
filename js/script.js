@@ -1,9 +1,10 @@
 // Dichiarazione variabili
 var addProject = $('#add-project'),
     addValue,
+    detailsTemplate = $('.details-template'),
     projectDate,
-    templateLine = $('.list-template .list-element'),
-    temporaryLine,
+    lineTemplate = $('.list-template .list-element'),
+    tempTemplate,
     today = $('#today'),
     tomorrow = $('#tomorrow'),
     valid;
@@ -32,15 +33,17 @@ addProject.on('keydown', function (e) {
   }
   if ( valid == true ) {
     projectDate = prompt("Insert the date\n(Example: today, tomorrow, 31/12/1999)");
-    temporaryLine = templateLine.clone();
-    temporaryLine.prepend(addValue);
+    tempTemplate = lineTemplate.clone();
+    tempTemplate.prepend(addValue);
     if ( projectDate.toLowerCase() == "today" ) {
-      today.append(temporaryLine);
+      today.append(tempTemplate);
     } else if ( projectDate.toLowerCase() == "tomorrow" ) {
-      tomorrow.append(temporaryLine);
-    // } else {
-    //   projectDate
-    // }
+      tomorrow.append(tempTemplate);
+    } else {
+      tempTemplate = detailsTemplate.clone();
+      tempTemplate.find('.summary-template').append('<h2>' + projectDate + '</h2>');
+      tempTemplate.find('.list-element').prepend(addValue);
+      $('.list__container').append(tempTemplate);
     }
   }
 });

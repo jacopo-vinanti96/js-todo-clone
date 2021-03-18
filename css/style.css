@@ -21,7 +21,6 @@ header {
   margin: auto;
   background-color: #9792E3;
   padding: 40px;
-  height: calc(100vh - 77px);
   color: #331E36;
 }
 
@@ -33,6 +32,6 @@ h2 {
   display: inline-block;
 }
 
-.details-template {
+.template {
   display: none;
 }
