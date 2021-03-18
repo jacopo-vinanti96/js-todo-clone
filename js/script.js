@@ -1,8 +1,13 @@
 // Dichiarazione variabili
 var addProject = $('#add-project'),
     addValue,
+    projectDate,
+    templateLine = $('.list-template .list-element'),
+    temporaryLine,
     today = $('#today'),
+    tomorrow = $('#tomorrow'),
     valid;
+
 
 
 // Dichiarazione funzione di controllo del testo
@@ -13,7 +18,6 @@ function inputControl (word) {
     alert("Please enter a word");
   } else {
     valid = true;
-    return word;
   }
 }
 
@@ -23,7 +27,19 @@ addProject.on('keydown', function (e) {
   valid = false;
   if ( e.keyCode == 13 ) {
     addValue = addProject.val();
-    addValue = inputControl(addValue);
+    inputControl(addValue);
     console.log(addValue);
+  }
+  if ( valid == true ) {
+    projectDate = prompt("Insert the date\n(Example: today, tomorrow, 31/12/1999)");
+    temporaryLine = templateLine.clone();
+    temporaryLine.prepend(addValue);
+    if ( projectDate.toLowerCase() == "today" ) {
+      today.append(temporaryLine);
+    } else if ( projectDate.toLowerCase() == "tomorrow" ) {
+      tomorrow.append(temporaryLine);
+    } else {
+      projectDate
+    }
   }
 });
