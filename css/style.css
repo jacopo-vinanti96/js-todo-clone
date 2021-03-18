@@ -24,6 +24,10 @@ header {
   color: #0E4749;
 }
 
+h1 span {
+  color: green;
+}
+
 /* Main */
 .main__container {
   width: 1024px;
@@ -53,6 +57,8 @@ ul {
 }
 
 li {
+  font-size: 18px;
+  margin: 10px 0;
   width: max-content;
   opacity: 1;
   transition: opacity 1s;
