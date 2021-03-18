@@ -56,13 +56,43 @@ h2 {
   display: inline-block;
 }
 
-input, li {
+.input__container {
+  margin-top: 100px;
+  padding: 25px 0 0;
+  border-top: 1px solid lightgrey;
+}
+
+input, li, .add-btn  {
   font-size: 18px;
+}
+
+input {
+  background-color: #EDE2B5;
+  border: none;
+  border-radius: 4px;
+}
+
+.add-btn {
+  display: none;
+  vertical-align: top;
+  padding: 0 10px;
+  background-color: #EDE2B5;
+  color: #331E36;
+  border: none;
+  border-radius: 4px;
 }
 
 @media screen and (max-width: 1024px) {
   .main__container {
     width: 100%;
+  }
+
+  .add-btn {
+    display: inline-block;
+  }
+
+  .instruction {
+    display: none;
   }
 }
 
