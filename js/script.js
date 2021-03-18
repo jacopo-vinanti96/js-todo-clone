@@ -78,9 +78,14 @@ addProject.on('keydown', function (e) {
 });
 
 $('.list__container').on( 'click', '.list-element', function () {
+  var detailsNotTemplate = $('div:not(.template) > .details-template');
   $(this).addClass('clicked');
   setTimeout( function () {
-    console.log($(".list-element.clicked"));
     $(".list-element.clicked").remove();
+    for (var i = 0; i < detailsNotTemplate.length; i++) {
+      if ( $(detailsNotTemplate[i]).find('.list-element').length == 0 ) {
+        $(detailsNotTemplate[i]).remove();
+      }
+    }
   }, 1000);
 });

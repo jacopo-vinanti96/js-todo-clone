@@ -28,6 +28,7 @@ header {
 .main__container {
   width: 1024px;
   margin: auto;
+  margin-top: 60px;
   background-color: #9792E3;
   padding: 40px;
   color: #331E36;
@@ -35,6 +36,11 @@ header {
 
 details {
   margin-bottom: 40px;
+}
+
+summary {
+  background-color: #9792E3;
+  border-bottom: 1px solid lightgrey;
 }
 
 h2 {
