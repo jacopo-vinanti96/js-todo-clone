@@ -38,8 +38,9 @@ addProject.on('keydown', function (e) {
       today.append(temporaryLine);
     } else if ( projectDate.toLowerCase() == "tomorrow" ) {
       tomorrow.append(temporaryLine);
-    } else {
-      projectDate
+    // } else {
+    //   projectDate
+    // }
     }
   }
 });
