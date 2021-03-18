@@ -68,6 +68,7 @@ function addProjectLine () {
         $('.list__container').append(tempTemplate);
       }
     }
+    addProject.val("");
   }
 }
 

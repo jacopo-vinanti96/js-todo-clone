@@ -38,6 +38,7 @@ h1 span {
   width: 1024px;
   margin: auto;
   margin-top: 60px;
+  margin-bottom: 60px;
   background-color: #9792E3;
   padding: 40px;
   color: #331E36;
@@ -57,9 +58,9 @@ h2 {
 }
 
 .input__container {
-  margin-top: 100px;
-  padding: 25px 0 0;
-  border-top: 1px solid lightgrey;
+  padding-bottom: 5px;
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 33px;
 }
 
 input, li, .add-btn  {
@@ -72,9 +73,31 @@ input {
   border-radius: 4px;
 }
 
+.plus {
+  position: relative;
+  vertical-align: sub;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  background-color: #331E36;
+  color: #9792E3;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  bottom: -3px;
+}
+
+.plus span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .add-btn {
   display: none;
-  vertical-align: top;
+  vertical-align: bottom;
   padding: 0 10px;
   background-color: #EDE2B5;
   color: #331E36;
@@ -92,6 +115,17 @@ input {
   }
 
   .instruction {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 391px) {
+  .add-btn {
+    margin-top: 5px;
+    display: block;
+  }
+
+  .plus {
     display: none;
   }
 }
