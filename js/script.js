@@ -24,7 +24,11 @@ function inputControl (word) {
 
 // Funzione per aggiungere un progetto
 function addProjectLine () {
+  // Assegnazione valid per il controllo
+  valid = false;
+  // Assegnazione valore dell' input
   addValue = addProject.val();
+  //Controllo dell' input
   inputControl(addValue);
   // Se l' input passa al controllo si chiede la data
   if ( valid == true ) {
@@ -76,9 +80,7 @@ var firstKeyDown = true;
 
 // Onclick addProject legge valore e lo aggiunge come nuova riga di testo
 addProject.on('keydown', function (e) {
-
-// Assegnazione valid per il controllo
-  valid = false;
+  
   if ( firstKeyDown == true ) {
     $('.instruction').addClass('visible');
     firstKeyDown = false;
