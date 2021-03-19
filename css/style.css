@@ -99,6 +99,9 @@ input {
 
 .instruction {
   opacity: 0;
+  display: block;
+  margin-left: 32px;
+  font-weight: 700;
 }
 
 .visible {
